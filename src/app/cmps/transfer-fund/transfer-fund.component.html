@@ -6,12 +6,6 @@
                 <p>Transfer to {{contact.name}}:</p>
             </div>
 
-            <!-- <div class="flex justify-end">
-                <p class="errors" *ngIf="amount.errors?.max? amount.invalid&&amount.dirty: false">You only have
-                    {{amount.errors.max.max}} coins
-                </p>
-            </div> -->
-
             <div class="input-container flex space-between">
                 <div class="bitcoin-container flex align-center">
                     <img src="./assets/icons/bitcoin-logo.svg" alt="bitcoinLogo">
@@ -20,15 +14,10 @@
                 </div>
 
                 <div class="flex column align-end">
-                    <!-- <input [(ngModel)]="amount" type="number" name="amount" placeholder="0.00"> -->
-                    <!-- <p class="errors" *ngIf="amount&&(amount.invalid&&amount.touched)">You only have
-                        {{amount.errors.max.max}}coins</p> -->
-                    <!-- <pre>{{amount|json}}</pre> -->
 
                     <input ngModel type="number" name="amount" placeholder="0.00" required max="{{user.balance}}"
                         #amount="ngModel" autofocus>
-                    <!-- <input type="number" formControlName="amount" name="amount" placeholder="0.00"> -->
-                    <!-- <p>≈$0.000876</p> -->
+
                     <p *ngIf="form.value.amount;else amountPlaceHolder">≈${{form.value.amount|btcToUsd|number:'1.0-2'}}
                     </p>
                     <ng-template #amountPlaceHolder>
@@ -51,7 +40,6 @@
         </div>
 
 
-        <!-- <div class="remainder-container"> -->
         <div class="remainder-container flex column align-end">
             <p>Balance after transfer:</p>
             <h1 *ngIf="form.value.amount;else balancePlaceholder">{{getBalance(form)}}</h1>
@@ -64,7 +52,6 @@
                 <p>≈$0.00</p>
             </ng-template>
         </div>
-        <!-- </div> -->
 
         <button [disabled]="form.invalid">TRANSFER AMOUNT</button>
     </form>

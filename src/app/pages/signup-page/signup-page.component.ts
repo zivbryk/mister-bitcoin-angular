@@ -56,7 +56,6 @@ export class SignupPageComponent implements OnInit {
       name: 'Guest',
       password: '1234',
     }
-    // this.authService.signup(userCred)
     this.authService.login(userCred)
     this.router.navigateByUrl('')
   }

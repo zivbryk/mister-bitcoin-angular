@@ -23,7 +23,6 @@
             }
         }
         nav {
-            //media: justify-content: end;
             button {
                 &.nav-btn {
                     padding: 0px 0px;
@@ -74,14 +73,12 @@
         bottom: 0;
         background-color: rgb(0 0 0 / 80%);
         z-index: 1;
-        // display: none;
         opacity: 0;
         transition: opacity 0.7s;
         cursor: pointer;
         pointer-events: none;
     }
     header.menu-open .screen {
-        // display: block;
         opacity: 1;
         pointer-events: auto;
     }
@@ -116,7 +113,6 @@
                     width: 190px !important;
                     text-align: start;
                     &.wallet::after {
-                        // text-transform: uppercase;
                         content: "\2001 Wallet";
                     }
                     &.contacts::after {
@@ -134,7 +130,6 @@
             justify-content: center;
             margin-block-start: 20px;
             button {
-                // padding-inline: 30px;
                 width: 190px;
             }
         }
@@ -163,8 +158,6 @@
             width: 32px;
             height: 22px;
             position: relative;
-            // margin: 50px auto;
-            // border: 1px solid $clr6;
             padding: 8px;
             -webkit-transform: rotate(0deg);
             -moz-transform: rotate(0deg);

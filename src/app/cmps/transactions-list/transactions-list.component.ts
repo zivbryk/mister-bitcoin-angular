@@ -38,8 +38,6 @@ export class TransactionsListComponent implements OnInit, OnDestroy {
     return item._id
   }
 
-  // console.log("filterTransactions => this.contact._id", this.contact._id)
-  // console.log("filterTransactions => transaction.toId", transaction.toId)
   filterTransactions() {
     if (this.filterByContact) {
       this.transactionsToShow = this.user.transactions

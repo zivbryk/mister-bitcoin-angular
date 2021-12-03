@@ -14,8 +14,6 @@ export class AuthGuard implements CanActivate, OnDestroy {
   async canActivate(
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Promise<boolean> {
-    // const isLoggedIn = await this.authService.checkIsLoggedIn()
-    // return isLoggedIn;
     this.authService.setLoggedinUser()
     this.subscription = this.authService.loggedInUser$.subscribe(user => {
       this.user = user

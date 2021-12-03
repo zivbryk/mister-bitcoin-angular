@@ -22,27 +22,16 @@ export class AppHeaderComponent implements OnInit {
   faWallet = faWallet
   faBars = faBars
   menuStatus: boolean = false
-  // loggedInUser: User
   loggedInUser$: Observable<User>
 
   constructor(private userService: UserService, private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
-    // this.authService.setLoggedinUser()
     this.loggedInUser$ = this.authService.loggedInUser$
-    // console.log("ngOnInit => this.loggedInUser$", this.loggedInUser$)
-
-    // this.loggedInUser = this.userService.setLoggedinUser()
   }
 
   onLogout(): void {
     this.authService.logout()
     this.router.navigateByUrl('auth/signup')
   }
-
-  // toggleMenu() {
-  //   // console.log('toggling');
-  //   // document.body.classList.toggle('menu-open')
-  //   this.menuStatus = !this.menuStatus
-  // }
 }

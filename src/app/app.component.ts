@@ -11,7 +11,6 @@ import { UserService } from './services/user.service';
 export class AppComponent implements OnInit {
   navigateTo: string
   msg: UserMsg
-  // title: String = 'mister-bitcoin'
 
   constructor(private userMsgService: UserMsgService, private userService: UserService) { }
 

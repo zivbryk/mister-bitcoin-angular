@@ -17,9 +17,6 @@ export class ConfirmedTransactionsChartComponent implements OnInit {
     { data: [], label: 'Confirmed Transactions' }
   ];
   public lineChartLabels: Label[] = [];
-  // public lineChartOptions: (ChartOptions & { annotation: any }) = {
-  //   responsive: true,
-  // };
   public lineChartColors: Color[] = [
     {
       borderColor: 'rgba(93, 44, 238, 1)',

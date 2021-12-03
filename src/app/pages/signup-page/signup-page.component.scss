@@ -2,7 +2,7 @@
 @import "../../../style/setup/functions";
 
 :host {
-    width: 100%;
+    width: 600px;
     margin: auto;
 }
 
@@ -24,7 +24,7 @@
 
     form {
         width: 100%;
-        padding: 20px 0px;
+        padding: 20px 90px;
         :not(:last-child) {
             margin-bottom: 10px;
         }
@@ -51,6 +51,16 @@
                 font-size: rem(18px);
                 border-width: 2px;
             }
+        }
+    }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 650px) {
+    .signup-page {
+        form {
+            width: 100%;
+            padding: 20px 10px;
         }
     }
 }

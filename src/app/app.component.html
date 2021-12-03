@@ -2,18 +2,9 @@
   <app-header></app-header>
   <main class="main-app-container flex justify-center align-center full">
     <router-outlet></router-outlet>
-
-    <!-- <button (click)="navigateTo='home'">Home</button>
-    <button (click)="navigateTo='contact'">Contacts</button>
-    <button (click)="navigateTo='statistics'">Statistics</button>
-    <home-page *ngIf="navigateTo==='home'"></home-page>
-    <contact-page *ngIf="navigateTo==='contact'"></contact-page>
-    <statistics-page *ngIf="navigateTo==='statistics'"></statistics-page> -->
   </main>
 
-  <!-- <section *ngIf="msg" class="user-msg"> -->
   <section [ngClass]="{'open': msg.isOpen, 'close':!msg.isOpen}" class="user-msg">
-    <!-- <h1>Contact Updated!</h1> -->
     <h1>{{msg.txt}}</h1>
   </section>
 </section>

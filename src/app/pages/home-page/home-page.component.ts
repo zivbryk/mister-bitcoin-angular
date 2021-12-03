@@ -15,15 +15,12 @@ import { StorageService } from 'src/app/services/storage.service';
 export class HomePageComponent implements OnInit, OnDestroy {
   @Output() listHeader: string = 'Your last transactions'
   user: User
-  // loggedInUser$: Observable<User>
   bitcoinRate: Observable<number>
   subscription: Subscription
   constructor(private userService: UserService, private bitcoinService: BitcoinService, private router: Router, private authService: AuthService, private storageService: StorageService) { }
 
   ngOnInit(): void {
     this.userService.loadUsers()
-    // this.authService.setLoggedinUser()
-    // this.loggedInUser$ = this.authService.loggedInUser$
     this.authService.setLoggedinUser()
     this.subscription = this.authService.loggedInUser$.subscribe(loggedInUser => {
       const users = this.storageService.query('user')

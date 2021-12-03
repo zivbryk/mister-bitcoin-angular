@@ -9,20 +9,10 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons';
   templateUrl: './contact-preview.component.html',
   styleUrls: ['./contact-preview.component.scss']
 })
-export class ContactPreviewComponent implements OnInit {
+export class ContactPreviewComponent {
   @Input() contact: Contact
-  // @Output() onSelect = new EventEmitter<string>()
   imgUrl: String
   faEdit = faEdit
 
   constructor(private contactService: ContactService) { }
-
-  async ngOnInit(): Promise<void> {
-    // this.imgUrl = await this.contactService.getImgUrl(this.contact.name).toPromise()
-  }
-
-  // onSelectContact(ev: MouseEvent) {
-  //   this.onSelect.emit(this.contact._id)
-  // }
-
 }

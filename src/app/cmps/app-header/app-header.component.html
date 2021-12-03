@@ -4,7 +4,6 @@
     <div class=" main-nav main-layout flex space-between">
         <a routerLink="" class="logo-container flex align-center">
             <div class="logo flex align-center justify-center">
-                <!-- <img src="../../../assets/logo.png" alt="logo"> -->
                 <img src="./assets/logo.png" alt="logo">
                 <h1>Mr.Bitcoin</h1>
             </div>
@@ -17,7 +16,6 @@
                     <fa-icon [icon]="faWallet"></fa-icon>
                 </button>
             </a>
-            <!-- <p>|</p> -->
 
             <a routerLink="contact" routerLinkActive="active"
                 (click)="header.classList.toggle('menu-open');navIcon.classList.toggle('open')">
@@ -25,7 +23,6 @@
                     <fa-icon [icon]="faAddressCard"></fa-icon>
                 </button>
             </a>
-            <!-- <p>|</p> -->
 
             <a routerLink="statistics" routerLinkActive="active"
                 (click)="header.classList.toggle('menu-open');navIcon.classList.toggle('open')">
@@ -48,9 +45,6 @@
         </div>
     </div>
     <div class="toggle-btn-container flex space-between align-center">
-        <!-- <button class="btn-menu-toggle" (click)="header.classList.toggle('menu-open')">
-            <fa-icon [icon]="faBars"></fa-icon>
-        </button> -->
 
         <div #navIcon class="nav-icon" (click)="navIcon.classList.toggle('open');header.classList.toggle('menu-open')">
             <span></span>
@@ -61,7 +55,7 @@
 
         <a routerLink="" class="logo-container flex">
             <div class="logo flex align-center justify-center">
-                <!-- <img src="../../../assets/logo.png" alt="logo"> -->
+
                 <img src="./assets/logo.png" alt="logo">
                 <h1>Mr.Bitcoin</h1>
             </div>

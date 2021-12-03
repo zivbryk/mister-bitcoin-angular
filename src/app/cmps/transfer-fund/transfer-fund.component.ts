@@ -16,12 +16,10 @@ import { UserMsgService } from 'src/app/services/user-msg.service';
 })
 export class TransferFundComponent implements OnInit, OnDestroy {
   @Input() contact: Contact
-  // @Input() loggedInUser: User
   faExchangeAlt = faExchangeAlt
   subscription: Subscription
   user: User
-  // amount: number
-  // form: FormGroup
+
   constructor(private userService: UserService,
     private authService: AuthService,
     private storageService: StorageService,
@@ -37,7 +35,6 @@ export class TransferFundComponent implements OnInit, OnDestroy {
 
   onTransferCoins(form: NgForm): void {
     this.userService.addTransaction(form.value.amount, this.contact, this.user)
-    // this.contact.transactionsNum++
     form.reset()
     this.userMsgService.setUserMsg({ txt: 'Transfer Completed!', isOpen: true })
   }

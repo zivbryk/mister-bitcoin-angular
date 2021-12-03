@@ -35,11 +35,6 @@ export class ContactEditPageComponent implements OnInit, OnDestroy {
       email: [this.contact.email ? this.contact.email : '', [Validators.required, Validators.pattern(/^\S+@\S+\.\S+$/i)]],
       phone: [this.contact.phone ? this.contact.phone : '']
     })
-    // this.subscription = this.route.params.subscribe(async ({ id }) => {
-    //   this.contact = id ?
-    //     await this.contactService.getContactById(id).toPromise() :
-    //     this.contactService.getEmptyContact() as Contact
-    // })
   }
 
   onBack() {

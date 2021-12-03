@@ -5,7 +5,6 @@
 }
 
 .transaction-list {
-    // background-color: $clr2;
     background-color: rgba($clr2, 55%);
     padding-block: 25px;
     border-radius: 15px;
@@ -21,7 +20,6 @@
     table {
         color: darken($clr1, 35%);
         .table-header {
-            // background-color: $clr4;
             background-color: rgba($clr4, 55%);
             color: darken($clr1, 55%);
         }
