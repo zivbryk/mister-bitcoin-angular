@@ -1,0 +1,14 @@
+<section class="contact-page flex column align-center">
+    <h1>Contacts</h1>
+    <div class="hr"></div>
+    <contact-filter></contact-filter>
+
+    <contact-list [contacts]="contacts$ | async"></contact-list>
+
+    <a routerLink="edit">
+        <button class="btn-add-contact">
+            <fa-icon [icon]="faPlus"></fa-icon>
+        </button>
+    </a>
+    <router-outlet></router-outlet>
+</section>

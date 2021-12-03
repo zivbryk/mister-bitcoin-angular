@@ -1,0 +1,116 @@
+// Font Sizes
+.fs12 {
+    font-size: rem(12px);
+}
+.fs14 {
+    font-size: rem(14px);
+}
+.fs18 {
+    font-size: rem(18px);
+}
+.fs20 {
+    font-size: rem(20px);
+}
+.fs24 {
+    font-size: rem(24px);
+}
+.fs28 {
+    font-size: rem(28px);
+}
+.fs30 {
+    font-size: rem(30px);
+}
+
+// Cleaners
+.clean-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.clean-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+//  Flex helprs
+.flex {
+    display: flex;
+
+    > *.full {
+        flex: 1;
+    }
+    &.column {
+        flex-direction: column;
+    }
+    &.row {
+        flex-direction: row;
+    }
+    &.align-center {
+        align-items: center;
+    }
+    &.flex-start {
+        align-items: flex-start;
+    }
+    &.align-end {
+        align-items: flex-end;
+    }
+    &.justify-center {
+        justify-content: center;
+    }
+    &.space-between {
+        justify-content: space-between;
+    }
+    &.space-around {
+        justify-content: space-around;
+    }
+    &.space-evenly {
+        justify-content: space-evenly;
+    }
+    &.justify-end {
+        justify-content: flex-end;
+    }
+    &.justify-start {
+        justify-content: flex-start;
+    }
+    &.self-start {
+        align-self: flex-start;
+    }
+    &.wrap {
+        flex-wrap: wrap;
+    }
+    &.grid {
+        display: grid;
+    }
+}
+
+//General helpers
+.text-center {
+    text-align: center;
+}
+
+.width-all {
+    width: 100%;
+}
+
+.height-all {
+    height: 100%;
+}
+
+.width-content {
+    width: fit-content;
+}
+
+.column-layout {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.column-layout > *:not(:last-child) {
+    margin-bottom: 7.5px;
+}
+
+.hr {
+    border: solid 1px rgba($clr1, 40%);
+    width: 100%;
+}

@@ -1,0 +1,28 @@
+<section *ngIf='user' class="home-page flex column">
+    <h1 class="home-page-header">Hi, {{user.name}}</h1>
+    <div class="hr"></div>
+    <!-- <img src="../../../assets/icons/bitcoin-logo.svg" alt="bitcoinLogo"> -->
+    <img src="./assets/icons/bitcoin-logo.svg" alt="bitcoinLogo">
+    <div class="currency-data flex space-between">
+        <div class="current-balance-container flex column">
+            <p>CURRENT BALLANCE</p>
+            <h1>BIT: <span class="bitcoin">₿ {{user.balance}}</span> </h1>
+            <h1>USD: <span>${{user.balance|btcToUsd|number:'1.0-2'}}</span></h1>
+        </div>
+
+        <div class="to-dollar-container flex column">
+            <div class="flex align-center">
+                <p>CURRENT BTC TO USD</p>
+                <span>live</span>
+            </div>
+            <h1 class="dollar">${{1|btcToUsd|number:'1.0-2'}}</h1>
+        </div>
+
+    </div>
+
+    <div class="hr"></div>
+
+    <div class="home-scroll-container">
+        <transactions-list [contact]='contact' [filterByContact]="false" [listHeader]='listHeader'></transactions-list>
+    </div>
+</section>

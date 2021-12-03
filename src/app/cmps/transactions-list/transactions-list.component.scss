@@ -1,0 +1,50 @@
+@import "../../../style/setup/variables";
+@import "../../../style/setup/functions";
+:host {
+    width: 100%;
+}
+
+.transaction-list {
+    // background-color: $clr2;
+    background-color: rgba($clr2, 55%);
+    padding-block: 25px;
+    border-radius: 15px;
+    .list-header {
+        margin-block-end: 20px;
+        text-align: center;
+    }
+    table,
+    th,
+    td {
+        border-collapse: collapse;
+    }
+    table {
+        color: darken($clr1, 35%);
+        .table-header {
+            // background-color: $clr4;
+            background-color: rgba($clr4, 55%);
+            color: darken($clr1, 55%);
+        }
+        th {
+            padding-inline: 10px;
+            font-weight: unset;
+        }
+        td {
+            text-align: center;
+        }
+        span {
+            position: relative;
+            fa-icon {
+                padding-inline-start: 20px;
+                color: $clr5;
+            }
+        }
+    }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 650px) {
+    .transaction-list {
+        font-size: rem(12px);
+    }
+}

@@ -1,0 +1,6 @@
+<section class="contact-filter">
+    <div class="flex space-between">
+        <input [(ngModel)]="filterBy.term" (ngModelChange)="onSetFilter()" type="text" placeholder="Search...">
+        <fa-icon [icon]="faSearch"></fa-icon>
+    </div>
+</section>

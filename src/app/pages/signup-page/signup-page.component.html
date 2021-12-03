@@ -1,0 +1,54 @@
+<section class="signup-page">
+    <div class="signup-container flex column align-center" *ngIf="mode==='signup'; else login">
+        <h1>SignUp for a new account</h1>
+        <div class="hr"></div>
+
+
+        <form (ngSubmit)='onSignup()' [formGroup]='signupForm' class="flex column align-center">
+
+            <input type="text" id="name" formControlName="name" placeholder="Name" required>
+
+            <input type="text" id="password" formControlName="password" placeholder="Password" required>
+
+            <button>Signup</button>
+        </form>
+        <div class="hr"></div>
+
+        <div class="guest-container flex column align-center">
+            <p>Want to have a quick look?</p>
+            <button (click)='onGuestLogin()'>Try as a guest!</button>
+        </div>
+        <div class="hr"></div>
+
+
+        <p>Already have an account?
+            <a routerLink="/auth/login">
+                <span>Signin</span>
+            </a>
+        </p>
+    </div>
+
+    <ng-template #login>
+        <div class="login-container flex column align-center">
+            <h1>Login to your account</h1>
+            <div class="hr"></div>
+
+            <form (ngSubmit)='onLogin()' [formGroup]='loginForm' class="flex column align-center">
+
+                <input type="text" id="name" formControlName="name" placeholder="Name" required>
+
+                <input type="text" id="password" formControlName="password" placeholder="Password" required>
+
+                <!-- <button [disabled]='form.invalid'>Signin</button> -->
+                <button>Login</button>
+            </form>
+            <div class="hr"></div>
+
+            <p>Already have an account?
+                <a routerLink="/auth/signup">
+                    <span>Signup</span>
+                </a>
+            </p>
+        </div>
+    </ng-template>
+</section>

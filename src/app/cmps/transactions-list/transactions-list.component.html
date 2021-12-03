@@ -1,0 +1,36 @@
+<section class="transaction-list flex column">
+    <div class="list-header">
+        <h1>{{listHeader}}</h1>
+    </div>
+    <!-- <div class="list-header" *ngIf="contact">
+        <h1>Transactions history with {{contact.name}}</h1>
+    </div> -->
+
+    <table>
+        <tr class="table-header">
+            <th class="transfer-icon"></th>
+            <th>TRANSFER</th>
+            <th>DATE</th>
+            <th>TIME</th>
+            <th>AMOUNT</th>
+        </tr>
+
+        <tr class="transactions-container" *ngFor="let transaction of transactionsToShow; trackByFn">
+            <td>
+                <span>
+                    <fa-icon *ngIf="transaction.direction==='Received'; else sent" [icon]="faAngleRight"></fa-icon>
+
+                    <ng-template #sent>
+                        <fa-icon [icon]="faAngleLeft"></fa-icon>
+                    </ng-template>
+                </span>
+            </td>
+            <td>{{transaction.direction}}</td>
+            <td>{{transaction.at|date:'shortDate'}}</td>
+            <td>{{transaction.at|date:'shortTime'}}</td>
+            <td>{{transaction.amount}} Coins</td>
+
+        </tr>
+    </table>
+
+</section>

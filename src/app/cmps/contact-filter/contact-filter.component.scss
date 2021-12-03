@@ -1,0 +1,25 @@
+@import "../../../style/setup/variables";
+@import "../../../style/setup/functions";
+
+:host {
+    width: 100%;
+}
+
+.contact-filter {
+    // background-color: lighten($clr3, 5%);
+    background-color: transparent;
+    padding: 15px;
+    font-size: rem(16px);
+    color: darken($clr1, 30%);
+    input {
+        padding-inline-start: 20px;
+        &::placeholder {
+            // color: lighten($clr6, 10%);
+            color: darken($clr1, 30%);
+            // color: $clr1;
+        }
+    }
+    fa-icon {
+        padding-inline-end: 20px;
+    }
+}

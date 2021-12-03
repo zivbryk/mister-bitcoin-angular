@@ -1,0 +1,9 @@
+<section class="contact-list">
+    <ul class="contacts-container clean-list flex column">
+        <li *ngFor="let contact of contacts; trackByFn" class="clean-list">
+            <a [routerLink]="[contact._id]">
+                <contact-preview [contact]='contact'></contact-preview>
+            </a>
+        </li>
+    </ul>
+</section>

@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+        sans-serif;
+    background-color: $clr4;
+    height: 100%;
+}
+
+body {
+    font-size: rem(18px);
+    color: $clr1;
+    line-height: rem(28px);
+    margin: 0;
+    height: 100%;
+}
+
+.body-small {
+    font-size: rem(15px);
+    line-height: rem(25px);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+    font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Noto Sans, Ubuntu, Droid Sans, Helvetica Neue,
+        sans-serif;
+    line-height: 1;
+    margin: 0;
+}
+
+h1.large {
+    font-size: rem(100px);
+    // line-height: rem(100px);
+}
+
+h1.small {
+    font-size: rem(64px);
+    // line-height: rem(56px);
+}
+
+h2 {
+    font-size: rem(48px);
+    // line-height: rem(48px);
+}
+
+h3 {
+    font-size: rem(18px);
+    line-height: rem(28px);
+}
+
+img {
+    width: 100%;
+}
+
+input,
+textarea {
+    width: 200px;
+    outline: none;
+}
+
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
+textarea {
+    resize: none;
+}
+
+a,
+.router-link {
+    color: unset;
+}
+
+a {
+    text-decoration: none;
+}

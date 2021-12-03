@@ -1,0 +1,130 @@
+@import "../../../style/setup/variables";
+@import "../../../style/setup/functions";
+:host {
+    margin-block-end: 30px;
+    width: 100%;
+}
+.transfer-fund {
+    p {
+        color: darken($clr1, 55%);
+    }
+    .errors {
+        color: red;
+    }
+    input.ng-touched.ng-invalid {
+        border-left: unset;
+    }
+    input.ng-valid[required] {
+        border-left: unset;
+    }
+    form {
+        width: 100%;
+        .balance-container {
+            position: relative;
+            background-color: rgba($clr2, 55%);
+            padding: 25px;
+            border-radius: 15px 15px 0px 0px;
+            .balance-header {
+                margin-block-end: 15px;
+            }
+            .bitcoin-container {
+                position: relative;
+                border: 0.1rem solid darken($clr1, 40%);
+                padding: 8px 30px 10px 50px;
+                margin-inline-start: 14px;
+                border-radius: rem(8px);
+                img {
+                    position: absolute;
+                    width: 46px;
+                    left: -20px;
+                }
+                h1 {
+                    font-size: 22px;
+                }
+            }
+            input {
+                text-align: end;
+                font-size: 22px;
+                color: $clr5;
+                &::placeholder {
+                    color: $clr1;
+                }
+            }
+            input::-webkit-outer-spin-button,
+            input::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+                margin: 0;
+            }
+        }
+        .exchange-container {
+            position: absolute;
+            left: 50%;
+            bottom: 0;
+            transform: translate(-50%, 50%);
+            background-color: lighten($clr3, 15%);
+            border-radius: 3rem;
+            padding: 4px 16px;
+            span {
+                display: block;
+                transform: rotate(90deg);
+                fa-icon {
+                    font-size: 22px;
+                    color: darken($clr1, 40%);
+                }
+            }
+        }
+
+        .remainder-container {
+            background-color: rgba($clr4, 55%);
+            padding: 25px;
+            width: 100%;
+            border-radius: 0px 0px 15px 15px;
+            margin-block-end: 20px;
+            h1 {
+                font-size: 22px;
+                color: $clr6;
+                margin-block-start: 10px;
+            }
+        }
+        button {
+            border: none;
+
+            background-image: linear-gradient(to right, #855c9e, $clr6);
+            width: 100%;
+            color: darken($clr1, 25%);
+        }
+    }
+}
+
+/* MOBILE ONLY */
+@media (max-width: 650px) {
+    .transfer-fund {
+        p {
+            font-size: rem(16px);
+        }
+        h1 {
+            font-size: rem(18px);
+        }
+        .balance-header {
+            :first-child {
+                max-width: 20ch;
+            }
+            :last-child {
+                max-width: 15ch;
+            }
+        }
+        form {
+            .balance-container {
+                .bitcoin-container {
+                    padding: 4px 17px 6px 36px;
+                }
+                .input-container {
+                    margin-block-end: 15px;
+                }
+            }
+            .remainder-container {
+                padding-block-start: 35px;
+            }
+        }
+    }
+}
